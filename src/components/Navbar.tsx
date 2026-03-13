@@ -47,10 +47,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
-      bg-gradient-to-r from-white via-white to-blue-500/80
-      bg-[length:200%_200%] animate-gradientMove
-      dark:from-[#0a0a0a] dark:via-[#0a0a0a] dark:to-blue-900
-      ${isScrolled ? "py-3 shadow-xl shadow-black/20" : "py-6"}
+      bg-gradient-to-r from-white via-white to-blue-500
+      dark:from-gray-900 dark:via-gray-900 dark:to-blue-900
+      ${isScrolled ? "py-3 shadow-lg" : "py-6"}
       `}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -61,9 +60,9 @@ const Navbar = () => {
             <img src={logo} alt="Anquest logo" className="h-10 w-auto" />
           </div>
 
-          <span className="text-2xl font-black font-display tracking-tighter text-slate-900 dark:text-white">
+          <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
             <span className="text-black dark:text-white">a</span>
-            <span className="text-brand-500">N</span>
+            <span className="text-blue-600">N</span>
             <span className="text-black dark:text-white">quest</span>
           </span>
         </Link>
@@ -71,19 +70,19 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden lg:flex flex-1 items-center justify-center gap-8">
 
-          <Link to="/" className="text-sm font-black text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
+          <Link to="/" className="text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
             Home
           </Link>
 
-          <Link to="/services" className="text-sm font-black text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
+          <Link to="/services" className="text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
             Services
           </Link>
 
-          <Link to="/about" className="text-sm font-black text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
+          <Link to="/about" className="text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
             About Us
           </Link>
 
-          <Link to="/contact" className="text-sm font-black text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
+          <Link to="/contact" className="text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-white uppercase tracking-widest transition">
             Contact
           </Link>
 
@@ -117,16 +116,16 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-white dark:bg-[#0a0a0a] border-b border-black/10 dark:border-white/10 p-8 flex flex-col gap-6 md:hidden shadow-2xl"
+          className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-black/10 dark:border-white/10 p-8 flex flex-col gap-6 md:hidden shadow-2xl"
         >
 
-          <Link to="/" className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link to="/" className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
 
-          <Link to="/services" className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link to="/services" className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
 
-          <Link to="/about" className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+          <Link to="/about" className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
 
-          <Link to="/contact" className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link to="/contact" className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
 
         </motion.div>
       )}
